@@ -1,0 +1,11 @@
+html {
+  background-color: hsl(47, 88%, 63%);
+  font-family: "Figtree", sans-serif;
+  height: 100vh;
+}
+html body footer {
+  margin: auto auto 0;
+  text-align: center;
+}
+
+/*# sourceMappingURL=index.css.map */
