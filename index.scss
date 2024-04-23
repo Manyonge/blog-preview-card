@@ -3,14 +3,91 @@ $yellow: hsl(47, 88%, 63%);
 $gray: hsl(0, 0%, 50%);
 $black: hsl(0, 0%, 7%);
 
+@mixin flex-row-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+};
+
+@mixin flex-row-start {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+};
+
+p,h6,h5,h3{
+  margin:0;
+}
+
 html{
   background-color: $yellow;
   font-family: "Figtree", sans-serif;
   height: 100vh;
   body{
+    main{
+      background-color: white;
+      height: 504px;
+      width: 327px;
+      margin: 30px auto;
+      border-radius: 20px;
+      border: solid black;
+      padding: 20px;
+
+      img{
+        object-fit: cover;
+        border-radius: 10px;
+        width: 100%;
+        height: 198px;
+      }
+      h5{
+        @include flex-row-center;
+        background-color: $yellow;
+        width: fit-content;
+        margin-top: 25px;
+        border-radius: 3px;
+        padding: 5px 12px;
+        font-size: 20px;
+      }
+      h6{
+        margin-top: 17px;
+        font-size: 20px;
+        font-weight: normal;
+      }
+      h3{
+        margin-top: 25px;
+      }
+      p{
+        margin-top: 25px;
+        color: $gray;
+      }
+
+      div{
+        @include flex-row-start;
+        margin-top: 30px;
+        img{
+          height: 32px;
+          width: 32px;
+        }
+        p{
+          margin: 0 10px 0;
+        }
+      }
+    }
     footer{
       margin: auto auto 0;
       text-align: center;
+    }
+    @media (min-width: $mobile) {
+      main{
+        height: 300px;
+        width: 221px;
+        img{
+          height: 115px;
+        }
+
+      }
     }
   }
 }
